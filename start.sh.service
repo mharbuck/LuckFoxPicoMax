@@ -1,0 +1,13 @@
+[Unit]
+Description=TTYD to bash Service
+After=default.target
+
+[Service]
+ExecStart=/usr/local/bin/ttyd -W -p 9000  bash -c "cd /root; exec bash"
+# WorkingDirectory=/home/myuser/my_app/
+Restart=on-failure
+#wqStandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=default.target
