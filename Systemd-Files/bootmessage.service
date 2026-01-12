@@ -1,0 +1,19 @@
+[Unit]
+Description=Boot Message LCD POS Program 
+After=network.target
+
+
+[Service]
+
+Type=oneshot
+ExecStart=insmod /root/lci_ldx9000_driver/usblcpd.ko 
+# bash /root/lci_ldx9000_driver/boot-m
+ExecStart=/root/lci_ldx9000_driver/boot-m
+
+
+
+
+[Install]
+WantedBy=default.target
+
+
