@@ -1,0 +1,13 @@
+[Unit]
+Description="GRB LED Matrix !"
+After=default.target
+
+[Service]
+ExecStart=/root/git/LuckFoxPicoMax/LED-Rainbow-WS2812B/6rainbow-snake
+# WorkingDirectory=/home/myuser/my_app/
+Restart=on-failure
+#wqStandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=default.target
